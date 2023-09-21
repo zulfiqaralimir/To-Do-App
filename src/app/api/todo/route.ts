@@ -4,7 +4,7 @@ import { sql } from "@vercel/postgres";
 
 export async function GET(request: NextRequest) {
   try {
-    await sql`CREATE TABLE IF NOT EXISTS Todos(id serial, Task varchar(255));`;
+    await sql`CREATE TABLE IF NOT EXISTS Todo(id serial, Task varchar(255));`;
 
     const res = await db.select().from(todoTable);
 

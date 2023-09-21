@@ -16,6 +16,7 @@ export async function GET(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
+  // const client = await db.connect();
   const req = await request.json();
   try {
     if (req.task) {

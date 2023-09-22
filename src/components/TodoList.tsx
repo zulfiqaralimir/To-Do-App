@@ -4,7 +4,7 @@ const getData = async () => {
     try {
         const res = await fetch("http://127.0.0.1:3000/api/todo", {
             method: "GET",
-            cache:"no-store",
+            cache: "no-store",
             headers: {
                 "Content-Type": "application/json"
             }
@@ -26,7 +26,7 @@ const TodoList = async () => {
 
     return (
 
-        <div className="max-h-[350px] overflow-auto mb-4 ">
+        <div className="max-h-[550px] overflow-auto mb-4 ">
             {
                 res.data.map((item) => {
                     return (
